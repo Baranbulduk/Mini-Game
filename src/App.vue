@@ -92,9 +92,9 @@ function closeModal() {
 
 <template>
   <div class="app">
-    <h2>Mini Game</h2>
+    <h1>Mini Game</h1>
     <button class="instructions-button" @click="toggleInstructions">
-      Show Instructions
+      GAME RULES
     </button>
     <div v-if="showInstructions">
       <div>
@@ -155,7 +155,7 @@ function closeModal() {
 }
 
 .app {
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,8 +167,10 @@ function closeModal() {
 
 .instructions-button {
   font-size: 0.8rem;
-  padding: 8px 10px;
-  background-color: #1a1a1a;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: 500;
+  background-color: #000000;
   border: none;
   border-radius: 10px;
   font-family: inherit;
@@ -177,14 +179,15 @@ function closeModal() {
 
 .instructions-button:hover {
   background-color: #313131;
-  box-shadow: 0 0 20px #313131;
 }
 
 .instructions-text {
+  color: #000000;
+  background-color: #f5f5f5;
+  border-radius: 10px;
   font-size: 0.8rem;
-  padding-top: 20px;
-  height: 50px;
-  width: 500px;
+  padding: 20px;
+  width: 400px;
 }
 
 .highlight {
@@ -253,10 +256,12 @@ function closeModal() {
   font-size: 0.8rem;
   font-weight: bold;
   margin-top: 5px;
+  color: #000;
 }
 
 .score {
-  background-color: #1a1a1a;
+  background-color: #f5f5f5;
+  color: #000;
   font-size: 1.4rem;
   font-weight: bold;
   width: 100px;
@@ -292,7 +297,7 @@ function closeModal() {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1a1a1a;
+  background-color: #000000;
   border: none;
   border-radius: 10px;
   font-weight: 500;
@@ -301,7 +306,6 @@ function closeModal() {
 
 .button:hover {
   background-color: #313131;
-  box-shadow: 0 0 20px #313131;
 }
 
 .button-icon {
