@@ -18,10 +18,10 @@ const props = defineProps({
         </div>
         <h2 :class="['player-title', playerClass]">{{ playerName }}</h2>
         <div class="scores">
-            <p class="score-title">SCORE</p>
+            <p class="score-title">TOTAL SCORE</p>
             <p> <span class="score total-score">{{ score }}</span></p>
-            <p class="score-title">CURRENT</p>
-            <p> <span class="score">{{ currentScore }}</span></p>
+            <p class="score-title">CURRENT SCORE</p>
+            <p> <span :class="['score', { 'score--active': isActive }]">{{ currentScore }}</span></p>
         </div>
     </div>
 </template>
@@ -97,13 +97,16 @@ const props = defineProps({
     font-size: 30px;
     font-weight: bold;
     width: 100px;
-    padding: 5px 10px;
+    padding: 5px 25px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: solid 1px #f0f0f0;
-    margin-bottom: -20px;
+}
+
+.score--active {
+  border: 1px solid black;
 }
 
 .total-score {

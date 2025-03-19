@@ -115,7 +115,7 @@ function closeModal() {
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  width: 1000px;
+  width: 1200px;
   height: 700px;
   border-radius: 20px;
 }

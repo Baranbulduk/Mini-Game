@@ -33,24 +33,23 @@ function addPlayer() {
 <template>
     <div class="controls">
         <div class="controls-buttons">
-            <button class="button" @click="play">
+            <button class="button reset" @click="reset">
+                <img src="../assets/reset.png" alt="reset" class="reset-icon" />
+                RESET
+            </button>
+            <button class="button play-pause" @click="play">
                 <img src="../assets/play.png" alt="play" class="play-icon" />
                 PLAY
             </button>
-            <button class="button" @click="pause">
+            <button class="button play-pause" @click="pause">
                 <img src="../assets/pause.png" alt="pause" class="pause-icon" />
                 PAUSE
             </button>
+            <button class="button addplayer" @click="addPlayer" v-if="props.numPlayers < 3">
+                <img src="../assets/addPlayer.png" alt="add player" class="add-player-icon" />
+                ADD PLAYER
+            </button>
         </div>
-        <button class="button" @click="addPlayer" v-if="props.numPlayers < 3">
-            <img src="../assets/addPlayer.png" alt="add player" class="add-player-icon" />
-            ADD PLAYER
-        </button>
-        <button class="button" @click="reset">
-            <img src="../assets/reset.png" alt="reset" class="reset-icon" />
-            RESET
-        </button>
-
     </div>
 </template>
 
@@ -58,67 +57,68 @@ function addPlayer() {
 .controls {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
+    width: 900px;
 }
 
 .controls-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
 }
 
 .button {
-    padding: 15px 40px;
+    padding: 20px;
     font-size: 0.8rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #000000;
+    color: #ffffff;
     border: none;
     border-radius: 10px;
-    font-weight: 500;
+    font-weight: 700;
     font-family: inherit;
+    width: 210px;
 }
 
 .button:hover {
-    background-color: #313131;
+    background-color: #272727;
 }
 
-.button-icon {
-    width: 20px;
-    height: 20px;
-    padding-right: 6px;
-    margin-bottom: -2px;
+.reset {
+    background-color: #a50000;
+    color: #ffffff;
+}
+
+.reset:hover {
+    background-color: #770000;
 }
 
 .play-icon {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
     margin-right: 6px;
-    margin-top: 1px;
 }
 
 .pause-icon {
-    width: 16px;
-    height: 16px;
+    width: 28px;
+    height: 28px;
     margin-right: 6px;
-    margin-top: 1px;
 }
 
 .reset-icon {
-    width: 14px;
-    height: 14px;
+    width: 26px;
+    height: 26px;
     margin-right: 8px;
-    margin-top: 2px;
 }
 
 .add-player-icon {
-    width: 14px;
-    height: 14px;
+    width: 26px;
+    height: 26px;
     margin-right: 8px;
-    margin-top: 1px;
 }
 </style>
