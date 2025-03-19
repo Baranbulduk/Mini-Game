@@ -106,7 +106,7 @@ const props = defineProps({
 }
 
 .score--active {
-  border: 1px solid black;
+  border: 1px solid rgb(143, 143, 143);
 }
 
 .total-score {
