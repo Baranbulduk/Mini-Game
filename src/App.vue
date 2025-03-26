@@ -127,4 +127,11 @@ function closeModal() {
   width: 100%;
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 1300px) {
+  .app {
+    width: 1000px;
+    height: 1800px;
+  }
+}
 </style>

@@ -121,4 +121,44 @@ function addPlayer() {
     height: 26px;
     margin-right: 8px;
 }
+
+@media screen and (max-width: 1300px) {
+    .controls-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .button {
+        padding: 15px;
+        font-size: 2.5rem;
+        height: 150px;
+        width: 1000px;
+    }
+
+    .play-icon {
+        width: 50px;
+        height: 50px;
+        margin-right: 18px;
+    }
+
+    .pause-icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 18px;
+    }
+
+    .reset-icon {
+        width: 46px;
+        height: 46px;
+        margin-right: 20px;
+    }
+
+    .add-player-icon {
+        width: 46px;
+        height: 46px;
+        margin-right: 20px;
+    }
+}
 </style>

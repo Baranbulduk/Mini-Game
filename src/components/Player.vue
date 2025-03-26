@@ -106,10 +106,35 @@ const props = defineProps({
 }
 
 .score--active {
-  border: 1px solid rgb(143, 143, 143);
+    border: 1px solid rgb(143, 143, 143);
 }
 
 .total-score {
     color: #00af0f;
+}
+
+@media screen and (max-width: 1300px) {
+    .arrow-box {
+        height: 85px;
+        margin-top: 10px;
+    }
+
+    .arrow {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-title {
+        font-size: 3rem;
+    }
+
+    .score-title {
+        font-size: 1.8rem;
+    }
+
+    .score {
+        width: 200px;
+        padding: 15px 25px;
+    }
 }
 </style>

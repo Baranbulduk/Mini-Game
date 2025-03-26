@@ -10,7 +10,8 @@ function toggleInstructions() {
 
 <template>
     <div>
-        <button class="instructions-button" @click="toggleInstructions"> <img src="../assets/gamerules.png" alt="gamerules" class="gamerules-icon" />
+        <button class="instructions-button" @click="toggleInstructions"> <img src="../assets/gamerules.png"
+                alt="gamerules" class="gamerules-icon" />
             GAME RULES
         </button>
         <div v-if="showInstructions">
@@ -62,5 +63,24 @@ function toggleInstructions() {
 .highlight {
     color: #21a700;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+    .instructions-button {
+        font-size: 2rem;
+        padding: 30px 60px;
+        margin-top: 80px;
+    }
+
+    .gamerules-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+
+    .instructions-text {
+        font-size: 1.6rem;
+        width: 830px;
+    }
 }
 </style>
